@@ -1,5 +1,6 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+// import { render, screen } from '@testing-library/react';
+import { render,screen } from './custom-render';
 import App from './App';
 
 // test('renders learn react link', () => {
@@ -10,7 +11,7 @@ import App from './App';
 
 describe('<App/> have rendered correctly', () => {
   it ('Component <App/> renders correctly', () => {
-    const {getByText} = render(<App/>);
+    render(<App/>);
     expect(screen.getByText(/Getting started with React Testing Library/i))
           .toBeInTheDocument();
   });
