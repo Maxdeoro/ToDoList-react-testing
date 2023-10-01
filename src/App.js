@@ -1,4 +1,5 @@
-
+import { BrowserRouter, Route } from "react-router-dom";
+import { TodoList } from "./TodoList";
 import './App.css';
 
 function App() {
@@ -7,6 +8,11 @@ function App() {
       <header className="App-header">
         <h2>Getting started with React Testing Library</h2>
       </header>
+      <div className="App-body">
+        <BrowserRouter>
+          <Route exact path="/" component={TodoList} />
+        </BrowserRouter>
+       </div>
     </div>
   );
 }
